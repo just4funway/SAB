@@ -117,16 +117,15 @@
     </div>
 
     <div class="news-card">
-    <div class="news-thumb news3"></div>
-      <div class="news-body">
+      <div class="news-thumb news3"></div>
+        <div class="news-body">
         <h3>Pesparawi</h3>
         <span class="date">14 November 2025</span>
         <p>Pada 14 November 2025, Sekolah Alkitab Batu (SAB) kembali...</p>
         <a href="#popup3" class="read-more">Baca Selengkapnya</a>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
 </div>
 
 <div id="popup1" class="popup">
@@ -193,7 +192,6 @@
   </div>
 </div>
 
-
 <section id="contact">
   <div class="contact-container">
     <div class="contact-left">
@@ -246,8 +244,19 @@
 
 <div class="copyright">
     <h3>Copyright &copy 2026 Sekolah Alkitab Batu</h3>
-  </div>
+</div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(
+      ".section2, .section-why, footer"
+    );
+
+    sections.forEach((sec, i) => {
+      setTimeout(() => sec.classList.add("show"), i * 500);
+    });
+  });
+</script>
 
 </body>
-
 </html>

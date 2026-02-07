@@ -302,11 +302,17 @@ html{
     }
 }
 
+header:hover {
+      background-color: #357ab8;
+    }
+
 .news-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;            
   gap: 25px;
   margin-top: 30px;
+  overflow-x: auto;         
+  padding-bottom: 15px;     
+  scroll-snap-type: x mandatory;
 }
 
 .news-card {
@@ -316,6 +322,17 @@ html{
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
   overflow: hidden;
   transition: transform 0.3s ease;
+  flex: 0 0 calc(33.333% - 20px); 
+  scroll-snap-align: start;
+  min-width: 250px;
+}
+
+.news-container::-webkit-scrollbar {
+  height: 8px;
+}
+.news-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }
 
 .news-card:hover {
@@ -598,4 +615,15 @@ footer li {
   padding: 8px 0px;
   text-align: center;
   color: white;
+}
+
+.section2, .section-why, footer {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
