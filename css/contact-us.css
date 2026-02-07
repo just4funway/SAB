@@ -1,0 +1,385 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.container-contact-us{
+    width: 100%;
+    height: 40vh;
+}
+
+.bg_img-contact-us{
+  background-image:  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.01)),url("image/ANGKATAN\ 70\(1\).JPG");
+  margin-bottom:200px;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.logo{
+  margin-top: 20px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.h2{
+    color:black;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.navbar ul{
+  margin-top: 10px;
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 30px;
+  position: relative;
+  size: 25px;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: lightblue;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+  width: 100%;
+}
+
+.title{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+.title-section{
+  margin:50px 0;
+}
+
+.title-section h2{
+  background-color: white;
+}
+.contact-us-section{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("image/denim_family.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    height: 100%;
+    position: relative;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+
+
+
+table{
+  border-radius: 20px;
+  border: black;
+}
+
+.footer_bg{
+    height: 50vh;
+    background-color: black;
+  }
+
+  .title-section{
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .title-section h2{
+    font-size: 30px;
+  }
+
+  .form-section{
+    margin-top: 50px;
+    width: 100%;
+    height: 80vh;
+    background-color: white; 
+  }
+
+  .form-section{
+    max-width: 850px;
+    display: grid;
+  }
+
+
+  .right h3{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .contact-img{
+    margin-top: 200px;
+    border-radius: 5px;
+
+  }
+
+  .label{
+    font-size: 25px;
+    padding-bottom: 30px;
+  }
+
+  tr, td{
+    padding-bottom: 30px;
+    
+  }
+
+
+  .contact-form{
+    margin-top: 65px;
+    padding: 20px;  
+    background-color: white;
+    height: 800px;
+    width: 827px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+  .contact-form label{
+    font-size: 25px;
+  }
+
+
+.contact-form input, .contact-form textarea{
+  padding: 0 10px;
+  margin: 0 ;
+  vertical-align: middle;
+  border-radius: 2px;
+  width: 90%;
+  min-height: 36px;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out 0s;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  :focus{
+      outline: none;
+      border: 1px solid #007c89;
+      box-shadow: inset 0 0 0 1px #007c89;
+  }            
+}
+  .contact-form textarea{
+    height: 250px;
+    min-height: 250px;
+    max-height: 500px;
+  }
+
+  .contact-form h3{
+  background-color: white;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.contact-form table{
+  background-color: white;
+  padding: 10px;
+}
+
+  table{
+    width: 100%;
+  }
+
+  
+  footer {
+  background: black;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 0px;
+}
+
+footer .f-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+  grid-gap: 5px;
+}
+
+.footer-center,
+.footer-right {
+  padding-top: 50px;
+}
+
+footer h2 {
+  position: relative;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+footer h2::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  width: 150px;
+  height: 2px;
+  background-color: white;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+.footer-left {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.footer-left img {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+}
+
+.footer-center li a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.footer-center li a:hover {
+  color: lightblue;
+}
+  
+  .icon{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-gap: 20px;
+  }
+  
+  .icon li{
+    list-style-type: none;
+  }
+  
+  .icon li a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: grey;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-radius: 40%;
+  }
+  
+  .icon li a img{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .icon li a:hover{
+    background: lightblue;
+  }
+  
+  .copyright{
+    width: 100%;
+    background: rgb(27, 27, 27);
+    padding: 8px 0px;
+    text-align: center;
+    color: white;
+  }
+
+  .submit{
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: black;
+    transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+    padding: 0 18px;
+    :hover {
+        color: #ffffff;
+        background-color: #006570;
+    }
+
+  }
+
+  .cancel{
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 12px;
+    line-height: 20px;
+    height: 30px;
+    max-height: 30px;
+    background: none;
+    font-weight: 700;
+    border: 0;
+    border-radius: 0;
+    color: black;
+    transition-timing-function: ease-in-out;
+    transition-property: background;
+    transition-duration: 150ms;
+    box-shadow: none;
+    :hover {
+        background: #F7F9FD;
+    }
+
+  }
+
+
+  .contact-us-section .left h3{
+  font-weight: normal;
+  color: white;
+}
+
+.contact-us-section .left a{
+  color: white;
+  
+}
