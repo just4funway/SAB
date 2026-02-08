@@ -38,6 +38,12 @@ html{
   background-size: cover;
 }
 
+.bg_img3 {
+  background-color: aliceblue;
+  background-position: center;
+  background-size: cover;
+}
+
 .section2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -235,6 +241,7 @@ html{
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     text-align: center;
     color: #333;
+    background-color: aliceblue;
 }
 
 .sw-header h1 {
