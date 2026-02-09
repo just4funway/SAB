@@ -8,113 +8,6 @@ html{
   scroll-behavior:smooth;
 }
 
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 800px;   
-  margin: 0 auto;
-  aspect-ratio: 16 / 9; 
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 50px;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;   
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
-}
-
-.container {
-  width: 100%;
-  height: 100vh;
-}
-
-.bg_img1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("image/ANGKATAN\ 70.JPG");
-  background-position: center;
-  background-size: cover;
-}
-
-.bg_img3 {
-  background-color: aliceblue;
-  background-position: center;
-  background-size: cover;
-}
-
-.section2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
-}
-
-.left {
-  background: linear-gradient(135deg, #d9d9d9, #ffffff);
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: center;
-}
-
-.left h1 {
-  font-size: 3em;
-  margin: 0 0 20px;
-  color: #333;
-}
-
-.left h2 {
-  font-size: 2em;
-  margin: 0 0 15px;
-  color: #555;
-}
-
-.left p {
-  font-size: 1.2em;
-  margin: 10px 0;
-  color: #444;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 28px;
-  margin-top: 20px;
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #0072ff, #00c6ff);
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
-}
-
-.right {
-  background-image: url("image/flyer-angkatan-71-rgb.png"); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 768px) {
-  .section2 {
-    grid-template-columns: 1fr;
-  }
-  .right {
-    height: 50vh;
-  }
-}
-
 .navbar {
   width: 100%;
   padding: 15px 30px;
@@ -232,6 +125,114 @@ html{
   background: lightblue;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.bg_img1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("image/ANGKATAN\ 70.JPG");
+  background-position: center;
+  background-size: cover;
+}
+
+.section2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.left {
+  background: linear-gradient(135deg, #d9d9d9, #ffffff);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.left h1 {
+  font-size: 3em;
+  margin: 0 0 20px;
+  color: #333;
+}
+
+.left h2 {
+  font-size: 2em;
+  margin: 0 0 15px;
+  color: #555;
+}
+
+.left p {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #444;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+}
+
+.right {
+  background-image: url("image/flyer-angkatan-71-rgb.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .section2 {
+    grid-template-columns: 1fr;
+  }
+  .right {
+    height: 50vh;
+  }
+}
+
+.bg_img3 {
+  background-color: aliceblue;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;   
+  margin: 0 auto;
+  aspect-ratio: 16 / 9; 
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;   
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
 }
 
 .section-why {
