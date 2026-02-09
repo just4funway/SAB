@@ -13,54 +13,81 @@ html{
   padding: 15px 30px;
   display: flex;
   align-items: center;
-  box-sizing: border-box;
   justify-content: space-between;
+  box-sizing: border-box;
   font-size: 14px;
 }
 
-.logo{
-  margin-top: 20px;
+.logo {
   width: 100px;
   cursor: pointer;
 }
 
-.h2{
-    color:black;
-    text-align: center;
-    margin-top: 40px;
+.nav-links {
+  margin: 0;
+  padding: 0;
 }
 
-.navbar ul{
-  margin-top: 10px;
-}
-
-.navbar ul li{
+.nav-links li {
   list-style: none;
   display: inline-block;
-  margin: 0 30px;
+  margin: 0 20px;
   position: relative;
-  size: 25px;
+  font-size: 16px;
 }
 
-.navbar ul li a{
+.nav-links li a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
-.navbar ul li::after{
+.nav-links li a:hover {
+  color: lightblue;
+}
+
+.nav-links li::after {
   content: '';
   height: 3px;
   width: 0;
   background: lightblue;
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -5px;
   transition: 0.5s;
 }
 
-.navbar ul li:hover::after{
+.nav-links li:hover::after {
   width: 100%;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background: #333; 
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #444;
+    padding: 20px;
+  }
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav-links.active {
+    display: flex;
+  }
 }
 
 .header-text{
@@ -615,6 +642,16 @@ footer li {
 
 .icon li a:hover {
   background: lightblue;
+}
+
+@media (max-width: 768px) {
+  footer .f-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-center, .footer-right {
+    padding-top: 10px;
+  }
 }
 
 .copyright {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tambah Berita</title>
+  <link rel="stylesheet" href="add-news.css">
+</head>
+<body>
+  <h2>Tambah Berita Baru</h2>
+  <form id="newsForm">
+    <input type="text" id="title" placeholder="Judul Berita" required>
+    <input type="date" id="date" required>
+    <textarea id="content" placeholder="Isi Berita" required></textarea>
+    <button type="submit">Simpan Berita</button>
+  </form>
+
+  <p id="status"></p>
+
+  <script>
+    document.getElementById("newsForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById("title").value;
+      const date = document.getElementById("date").value;
+      const content = document.getElementById("content").value;
+
+      const newNews = { title, date, content };
+
+      // Simulasi: simpan ke localStorage (bisa diganti ke server/JSON file)
+      let newsList = JSON.parse(localStorage.getItem("news")) || [];
+      newsList.push(newNews);
+      localStorage.setItem("news", JSON.stringify(newsList));
+
+      document.getElementById("status").innerText = "Berita berhasil ditambahkan!";
+      document.getElementById("newsForm").reset();
+    });
+  </script>
+</body>
+</html>

@@ -9,19 +9,20 @@
 </head>
 
 <body>
-  <div class="container bg_img-contact-us" id="section1">
-    <div class="navbar">
-      <img src="css/image/logo-sab.png" alt="logo" class="logo">
-      <ul>
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="about-us.html">ABOUT</a></li>
-        <li><a href="read-more.html">COURSEWARE</a></li>
-        <li><a href="events.html">EVENTS</a></li>
-        <li><a href="#contact">CONTACT US</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="container bg_img1" id="section1">
+  <div class="navbar">
+    <img src="css/image/logo-sab.png" alt="logo" class="logo">
+    <div class="hamburger">☰</div>
 
+    <ul class="nav-links">
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="about-us.html">ABOUT</a></li>
+      <li><a href="read-more.html">COURSEWARE</a></li>
+      <li><a href="events.html">EVENTS</a></li>
+      <li><a href="contact_us.html">CONTACT US</a></li>
+    </ul>
+  </div>
+</div>
 <footer>
     <div class="f-container">
       <div class="footer-left">
@@ -51,5 +52,14 @@
 <div class="copyright">
     <h3>Copyright &copy 2026 Sekolah Alkitab Batu</h3>
   </div>
+
+  <script>
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
 </body>
 </html>
