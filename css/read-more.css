@@ -27,6 +27,8 @@ html{
   justify-content: space-between;
   box-sizing: border-box;
   font-size: 14px;
+  position: relative; 
+  z-index: 1000;
 }
 
 .logo {
@@ -78,7 +80,6 @@ html{
   font-size: 24px;
   color: white;
   cursor: pointer;
-  background: #333; 
 }
 
 @media (max-width: 768px) {

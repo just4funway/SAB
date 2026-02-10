@@ -9,42 +9,43 @@
 </head>
 
 <body>
- <div class="container bg_img1" id="section1">
-  <div class="navbar">
-    <img src="css/image/logo-sab.png" alt="logo" class="logo">
-    <div class="hamburger">☰</div>
+ <div class="container" id="section1">
+    <div class="slider-container">
+        <div class="slide active bg_img1"></div>
+        <div class="slide bg_img2"></div>
+        <div class="slide bg_img3"></div>
+    </div>
 
-    <ul class="nav-links">
-      <li><a href="home.html">HOME</a></li>
-      <li><a href="about-us.html">ABOUT</a></li>
-      <li><a href="read-more.html">COURSEWARE</a></li>
-      <li><a href="events.html">EVENTS</a></li>
-      <li><a href="contact_us.html">CONTACT US</a></li>
-    </ul>
-  </div>
-</div>
+    <div class="navbar">
+        <img src="css/image/logo-sab.png" alt="logo" class="logo">
+        <div class="hamburger">☰</div>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about-us.html">ABOUT</a></li>
+            <li><a href="read-more.html">COURSEWARE</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
+        </ul>
+    </div>
 
     <div class="header-text">
-      <h1>Sekolah Alkitab Batu</h1>
-      <p>Anda dipanggil untuk Melayani</p>
-      <div class="header-button">
-        <a href="contact_us.html">Join Us</a>
-      </div>
+        <h1>Sekolah Alkitab Batu</h1>
+        <p>Anda dipanggil untuk Melayani</p>
     </div>
-  </div>
+</div>
 
 <div class="section2">
   <div class="left">
     <h1>Angkatan 71</h1>
     <h2>Sekolah Alkitab Batu</h2>
     <p><strong>Psalms 126 : 4-6</strong></p>
-    <a href="" class="btn">Daftar Sekarang</a>
+    <a href="https://wa.me/message/JY6PTT3UTQPRJ1" class="btn">Daftar Sekarang</a>
   </div>
   <div class="right">
   </div>
 </div>
 
-<div class="container bg_img3" id="section3">
+<div class="container" id="section3">
     <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/Lh87fU7AupY?si=ZklBjp4ienj2qCoZ"
             title="YouTube video player"
@@ -195,29 +196,13 @@
   </div>
 </div>
 
-<section id="contact">
-  <div class="contact-container">
-    <div class="contact-left">
-      <h2>Connect</h2>
-      <p>
-        Stay in touch with Sekolah Alkitab Batu melalui informasi kontak berikut. 
-        Kami menghargai dukungan Anda dan menantikan kabar dari Anda.
-      </p>
-      <a href="https://wa.me/message/JY6PTT3UTQPRJ1" class="contact-link">
-        📞 081321971700
-      </a><br><br>
-      <a href="mailto:sekolahalkitabbatusab@gmail.com" class="contact-link">
-        📧 sekolahalkitabbatusab@gmail.com
-      </a><br><br>
-      <p>
-        📍 Jalan Ir. Soekarno No.7-9, Beji, Kecamatan Junrejo, Kota Batu, Jawa Timur
-      </p>
-    </div>
-    <div class="contact-right">
-      <div class="logo-circle"></div>
-    </div>
-  </div>
-</section>
+<section class="cta-section">
+            <h1 class="cta-title">Join Sekolah Alkitab Batu</h1>
+            <p class="cta-description">
+                Become part of our community and take the first step towards a fulfilling and meaningful journey.
+            </p>
+            <a href="contact_us.html" class="btn-join">JOIN NOW</a>
+        </section>
 
 <footer>
     <div class="f-container">
@@ -250,6 +235,16 @@
 </div>
 
 <script>
+  const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+
+        function changeSlide() {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+
+        setInterval(changeSlide, 5000);
   window.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll(
       ".section2, .section-why, footer"
@@ -259,9 +254,7 @@
       setTimeout(() => sec.classList.add("show"), i * 500);
     });
   });
-</script>
-
-<script>
+  
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
 
