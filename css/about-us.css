@@ -169,129 +169,77 @@ html{
 .content-section {
   width: 80%;
   margin: 60px auto;
-  text-align: center;
   color: #333;
 }
 
-.content-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.content-section p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.card {
-  width: 220px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-}
-
-.card h3 {
-  margin: 15px 0 5px;
-  font-size: 20px;
-  color: #222;
-}
-
-.card p {
-  margin-bottom: 15px;
-  font-size: 16px;
-  color: #555;
+.content-section.center {
+  text-align: center;   
 }
 
 .popup {
-  display: none;
+  display: none; 
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  z-index: 999;
-}
-
-.popup:target {
-  display: block;
-  animation: fadeIn 0.3s ease;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); 
 }
 
 .popup-content {
   background: #fff;
-  margin: 8% auto;
+  margin: 5% auto;
   padding: 30px;
-  width: 60%;
-  max-width: 600px;
+  width: 80%;
+  max-width: 900px;
   border-radius: 10px;
-  text-align: justify;
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  position: relative; 
 }
 
-.popup-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 20px;
+.section-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
-.close {
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #888;
+.section-inner.reverse {
+  flex-direction: row-reverse;
 }
 
-.close:hover {
-  color: red;
+.section-img img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+.section-text {
+  flex: 1;
+}
+
+.section-text h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.section-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
 }
 
 @media (max-width: 768px) {
-  .header-text h1 {
-    font-size: 50px;
-  }
-
-  .card-container {
+  .section-inner,
+  .section-inner.reverse {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
-
-  .card {
-    width: 80%;
-  }
-
-  .popup-content {
-    width: 90%;
+  .section-img img {
+    max-width: 100%;
   }
 }
 

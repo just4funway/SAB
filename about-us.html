@@ -29,32 +29,92 @@
     </div>
   </div>
 
-  <section id="visi" class="content-section">
-    <h2>Visi</h2>
-    <p>
+<section id="visi" class="content-section">
+  <div class="section-inner">
+    <div class="section-img">
+      <img src="css/image/sab7.JPG" alt="Visi Sekolah">
+    </div>
+    <div class="section-text">
+      <h2>Visi</h2>
+      <p>
       SEKOLAH ALKITAB BATU (SAB) ADALAH LEMBAGA PELATIHAN DAN BELAJAR ALKITAB SEJAK TAHUN 1956
       DENGAN TUJUAN MELATIH CALON PENDETA/GEMBALA POTENSIAL DAN TENAGA-TENAGA MISIONARIS UNTUK 
       MEMBANGUN GEREJA-GEREJA LOKAL YANG KUAT DI DALAM NEGERI MAUPUN UNTUK LUAR NEGERI, SESUAI 
       DENGAN AMANAT AGUNG KRISTUS.SEKOLAH ALKITAB BATU (SAB) ADALAH SALAH SATU SARANA UNTUK 
       MEMBANGUN TUBUH KRISTUS DENGAN SUASANA SPRITUAL YANG KUAT DAN KEMURNIAN DOKTRIN, DI MANA 
       SETIAP SISWA AKAN DIMURIDKAN DAN SETELAH DILENGKAPI, MEREKA AKAN DILEPASKAN KE DALAM PELAYANAN.
-  </section>
+      </p>
+    </div>
+  </div>
+</section>
 
-  <section id="misi" class="content-section">
-    <h2>Misi</h2>
-    <p>SEKOLAH ALKITAB BATU (SAB) BERKOMITMEN MENAWARKAN PROGRAM PRAKTIS DALAM PELATIHAN THEOLOGI, 
+<section id="misi" class="content-section">
+  <div class="section-inner reverse">
+    <div class="section-img">
+      <img src="css/image/sab8.JPG" alt="Misi Sekolah">
+    </div>
+    <div class="section-text">
+      <h2>Misi</h2>
+      <p>
+    SEKOLAH ALKITAB BATU (SAB) BERKOMITMEN MENAWARKAN PROGRAM PRAKTIS DALAM PELATIHAN THEOLOGI, 
     SEHINGGA MEMBEKALI TIAP SISWA DALAM ASPEK DOKTRIN DAN PELAYANAN TERAPAN.
     SEKOLAH ALKITAB BATU BERUSAHA MEMENUHI KEBUTUHAN BELAJAR SISWA DAN MENGINSPIRASI SERTA 
-    MEMAKSIMALKAN POTENSI TIAP SISWA SEHINGGA MENGHASILKAN HAMBA TUHAN YANG KOMPETEN MENJAWAB 
-    TANTANGAN JAMAN.
+    MEMAKSIMALKAN POTENSI TIAP SISWA SEHINGGA MENGHASILKAN HAMBA TUHAN YANG KOMPETEN MENJAWAB TANTANGAN JAMAN.
     SEKOLAH ALKITAB BATU (SAB) MEMBINA TIAP SISWA UNTUK MENJADI PELAYAN KRISTUS BERKARAKTER 
-    HAMBA YANG MEMBERI DIRI MELAYANI MASYARAKAT LUAS DAN UMAT KRISTIANI KHUSUSNYA.</p>
-  </section>
+    HAMBA YANG MEMBERI DIRI MELAYANI MASYARAKAT LUAS DAN UMAT KRISTIANI KHUSUSNYA.
+      </p>
+    </div>
+  </div>
+</section>
   
-  <section id="sejarah" class="content-section">
-    <h2>Sejarah Sekolah</h2>
-    <a href="" class="btn">Lihat Selengkapnya</a>
-  </section>
+ <section id="sejarah" class="content-section center">
+  <h2>Sejarah Sekolah</h2>
+  <button class="btn" onclick="togglePopup()">Lihat Selengkapnya</button>
+</section>
+
+<div id="popup-sejarah" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="togglePopup()" style="cursor:pointer; float:right; font-size:28px;">&times;</span>
+    
+    <div class="section-inner">
+      <div class="section-img">
+        <img src="image/sejarah1.jpg" alt="Foto Sejarah 1">
+      </div>
+      <div class="section-text">
+        <h3>Awal Berdiri</h3>
+        <p>Sekolah Alkitab Batu (SAB) didirikan pada tahun 1956...</p>
+      </div>
+    </div>
+
+    <div class="section-inner reverse">
+      <div class="section-img">
+        <img src="image/sejarah2.jpg" alt="Foto Sejarah 2">
+      </div>
+      <div class="section-text">
+        <h3>Perkembangan</h3>
+        <p>Seiring berjalannya waktu, SAB berkembang...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePopup() {
+    const popup = document.getElementById("popup-sejarah");
+    if (popup.style.display === "none" || popup.style.display === "") {
+      popup.style.display = "block";
+    } else {
+      popup.style.display = "none";
+    }
+  }
+  window.onclick = function(event) {
+    const popup = document.getElementById("popup-sejarah");
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  }
+</script>
+
 
 <script>
     function openPopup(id) {
