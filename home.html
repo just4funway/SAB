@@ -16,17 +16,19 @@
         <div class="slide bg_img3"></div>
     </div>
 
-    <div class="navbar">
-        <img src="css/image/logo-sab.png" alt="logo" class="logo">
-        <div class="hamburger">☰</div>
-        <ul class="nav-links">
-            <li><a href="home.html">HOME</a></li>
-            <li><a href="about-us.html">ABOUT</a></li>
-            <li><a href="read-more.html">COURSEWARE</a></li>
-            <li><a href="events.html">EVENTS</a></li>
-            <li><a href="contact_us.html">CONTACT US</a></li>
-        </ul>
-    </div>
+  <nav class="navbar">
+    <img src="css/image/logo-sab.png" alt="logo" class="logo">
+    <div class="hamburger" id="hamburger-menu">☰</div>
+    <ul class="nav-links" id="nav-list">
+      <li class="sidebar-only sidebar-title"><a href="home.html">Sekolah Alkitab Batu</a></li>
+      <li class="active"><a href="home.html">HOME</a></li>
+      <li><a href="about-us.html">ABOUT</a></li>
+      <li><a href="read-more.html">COURSEWARE</a></li>
+      <li><a href="events.html">EVENTS</a></li>
+      <li><a href="contact_us.html">CONTACT US</a></li>
+    <li class="sidebar-only sidebar-footer">© 2026 Sekolah Alkitab Batu</li>
+    </ul>
+  </nav>
 
     <div class="header-text">
         <h1>Sekolah Alkitab Batu</h1>
@@ -254,13 +256,12 @@
       setTimeout(() => sec.classList.add("show"), i * 500);
     });
   });
-  
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
 
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
-  });
+});
 </script>
 
 </body>

@@ -16,7 +16,7 @@ html{
   justify-content: space-between;
   box-sizing: border-box;
   font-size: 14px;
-  position: relative; 
+  position: relative;
   z-index: 1000;
 }
 
@@ -26,13 +26,13 @@ html{
 }
 
 .nav-links {
-  display: flex; 
   margin: 0;
   padding: 0;
+  display: flex;
+  list-style: none;
 }
 
 .nav-links li {
-  list-style: none;
   margin: 0 20px;
   position: relative;
   font-size: 16px;
@@ -40,16 +40,20 @@ html{
 
 .nav-links li a {
   text-decoration: none;
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   transition: color 0.3s ease;
+}
+
+.sidebar-only {
+  display: none !important;
 }
 
 .nav-links li a:hover {
   color: lightblue;
 }
 
-.nav-links li::after {
+.nav-links li:not(.sidebar-only)::after {
   content: '';
   height: 3px;
   width: 0;
@@ -57,44 +61,91 @@ html{
   position: absolute;
   left: 0;
   bottom: -5px;
-  transition: width 0.5s ease;
+  transition: 0.5s;
 }
 
-.nav-links li:hover::after {
+.nav-links li:not(.sidebar-only):hover::after {
   width: 100%;
 }
 
 .hamburger {
   display: none;
   font-size: 24px;
-  color: #fff;
+  color: white;
   cursor: pointer;
-  border: none;
 }
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none; 
     flex-direction: column;
-    width: 100%;
-    background: #444;
-    padding: 20px;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .hamburger {
-    display: block;
+    width: 70%; 
+    height: 100vh;
+    background: #232739; 
+    position: fixed;
+    top: 0;
+    right: -70%;
+    transition: right 0.4s ease;
+    padding: 0;
+    z-index: 999;
   }
 
   .nav-links.active {
     display: flex;
+    right: 0; 
+  }
+
+  .sidebar-only {
+    display: block !important;
+  }
+
+  .sidebar-title {
+    padding: 30px 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .sidebar-title a {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: none !important;
+  }
+
+  .nav-links li {
+    margin: 0; 
+    width: 100%;
+    text-align: left; 
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 18px 25px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-links li a:hover, 
+  .nav-links li.active a {
+    background: #3a86ff; 
+    color: white;
+  }
+
+  .sidebar-footer {
+    margin-top: auto; 
+    padding: 20px 25px;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-links li::after {
+    display: none; 
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1001; 
   }
 }
-
 .header-text{
   width: 100%;
   position: absolute;
