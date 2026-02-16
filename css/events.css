@@ -262,15 +262,15 @@ html{
 }
 
 .card5 {
-  background-image: url(image/denim_ripped.jpg);
+  background-image: url(image/IMG_9451.JPG);
 }
 
 .card6 {
-  background-image: url(image/denim_skirt.jpg);
+  background-image: url(image/IMG_0769.JPG);
 }
 
 .card7 {
-  background-image: url(image/denim_skirt.jpg);
+  background-image: url(image/IMG_1078.JPG);
 }
 
 .card8 {
@@ -278,7 +278,7 @@ html{
 }
 
 .card9 {
-  background-image: url(image/denim_skirt.jpg);
+  background-image: url(image/IMG_4443.JPG);
 }
 
 .card10 {
@@ -286,27 +286,98 @@ html{
 }
 
 .card11 {
-  background-image: url(image/denim_skirt.jpg);
+  background-image: url(image/IMG_0211.JPG);
 }
 
 .card12 {
-  background-image: url(image/denim_skirt.jpg);
+  background-image: url(image/IMG_0578.JPG);
 }
 
 .card13{
-  background-image: url(image/denim_skirt.jpg);
+  background-image: url(image/IMG_0902.JPG);
 }
 
 .card14 {
-  background-image: url(image/denim_skirt.jpg);
+  background-image: url(image/IMG_4769.JPG);
 }
 
 .card15 {
-  background-image: url(image/denim_skirt.jpg);
+  background-image: url(image/pengutusan.png);
 }
 
 .card:hover {
   transform: translateY(-10px);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+}
+
+.popup:target {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+  background: #fff;
+  margin: 8% auto;
+  padding: 30px;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 10px;
+  text-align: justify;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.popup-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto 20px;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #888;
+}
+
+.close:hover {
+  color: red;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media (max-width: 768px) {
+  .header-text h1 {
+    font-size: 50px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .popup-content {
+    width: 90%;
+  }
 }
 
 footer {
