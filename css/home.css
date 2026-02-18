@@ -511,12 +511,71 @@ header:hover {
   overflow-y: auto;
 }
 
-.popup-img {
-  width: 500px;
+.popup-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #004aad; 
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.popup-subtitle {
+  font-size: 18px;
+  font-style: italic;
+  color: #d35400; 
+}
+
+.popup-images {
+  display: flex;
+  gap: 20px;              
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;        
+}
+
+.popup-img-box {
+  flex: 1;
+  text-align: center;
+}
+
+.popup-img-box img {
+  width: 100%;
+  max-width: 400px;       
   height: 250px;
   object-fit: cover;
-  display: block;
-  margin: 0 auto 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.caption {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}
+
+.caption {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}
+
+.popup-body p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.highlight {
+  background: #fdf2d0;
+  border-left: 5px solid #f39c12;
+  padding: 10px 15px;
+  font-style: italic;
+  margin: 20px 0;
+  color: #333;
 }
 
 .close {
@@ -535,6 +594,17 @@ header:hover {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+@media (max-width: 600px) {
+  .popup-content {
+    width: 95%;
+    padding: 15px;
+  }
+  .popup-title {
+    font-size: 22px;
+  }
+}
+
 
 .cta-section {
     text-align: center;
